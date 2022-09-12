@@ -1,0 +1,138 @@
+:root {
+--soft-blue: hsl(215, 51%, 70%);
+--cyan: hsl(178, 100%, 50%);
+--very-dark-blue-main: hsl(217, 54%, 11%);
+--very-dark-blue-card: hsl(216, 50%, 16%);
+--very-dark-blue-line: hsl(215, 32%, 27%);
+--white: hsl(0, 0%, 100%);
+}
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background-color: var(--very-dark-blue-main);
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto 0;
+}
+.card{
+    background-color: var(--very-dark-blue-card);
+    width: 400px;
+    height: 700px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+}
+.card-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.card-img>img {
+    width: 350px;
+    border-radius: 10px;
+}
+.overlay {
+    opacity: 0;
+    background-color: hsla(178, 100%, 50%, 0.452);
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.overlay:hover {
+   cursor: pointer;
+   opacity: 1;
+}
+.title {
+    color: var(--white);
+    font-size: 1.5rem;
+}
+.description {
+    color: var(--soft-blue);
+}
+.price {
+    display: flex;
+    justify-content: space-between;
+}
+.price-amount {
+    color: var(--cyan);
+}
+.price-days {
+    color: var(--soft-blue);
+}
+.next-to  {
+    display: flex;
+    gap: 10px;
+}
+.line {
+    border-color: var(--very-dark-blue-line);
+}
+.creator {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.creator-photo {
+ width: 50px;
+ border: var(--white) solid 1px;
+ border-radius: 50%;
+}
+.creator-name-index {
+    color: var(--soft-blue);
+}
+.creator-name{
+    color: var(--white);
+}
+.title:hover,
+.creator-name:hover{
+    color: var(--cyan);
+    cursor: pointer;
+}
+.attribution { 
+    color: var(--white);
+    margin-top: 5%;
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
+@media screen and (max-width: 375px){
+    * {
+        font-size: 11px;
+    }
+    body {
+        /* width: fit-content; */
+    }
+    .card {
+        width: 250px;
+        height: 500px;
+    }
+    .card-img>img {
+        width: 200px;
+    }
+    .overlay {
+        width: 200px;
+        height: 200px;
+    }
+
+}
